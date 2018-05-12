@@ -1,0 +1,65 @@
+page-hoteles {
+	.item-block{
+		border-top: none !important;
+		border-bottom: 2px solid map-get($colors,primary) !important;
+	}
+	.list-ios{
+		margin:0;
+	}
+	.scroll-content{
+		padding:0 !important;
+	}
+	.container-top{
+		position: relative;
+		text-align: center;
+		color: white;
+		.header{
+			width:100%;
+		}
+		h2{
+			text-transform: uppercase;
+			font-weight: bold;
+			color:map-get($colors,blue);
+			font-size:1.6em;
+			position: absolute;
+			top: 25%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	.container{
+		width:100%;
+		.container-image{
+			float:left;
+			width:30%;
+			img{
+				border: 3px solid map-get($colors,gray);
+				border-radius: 50%;
+				display: inline-block;
+
+			}
+		}
+		.container-middle{
+			float:left;
+			width:50%;
+			padding-left:5%;
+			h2{
+				padding:6% 0 0 0;
+				float:left;
+				text-transform: uppercase;
+				font-weight: bold;
+				width:100%;
+			}
+			.text{
+				display: inline-block;
+				float:left;
+				word-break: break-all;
+				word-wrap: break-word;
+				width:10%;
+				font-size:0.8em;
+			}
+		}
+	}
+
+}

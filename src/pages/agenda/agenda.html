@@ -1,0 +1,63 @@
+<ion-header>
+	<ion-navbar hideBackButton *navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>
+			Agenda
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content *ngFor="let event of evento" id="page4">
+	<div class="container-top">
+		<div class="button-container">
+			<button id="uno" ion-button (click)="linkButtonDia(evento[0].field_dia_1)">
+				Día 1
+			</button>
+			<button id="dos" ion-button (click)="linkButtonDia(evento[0].field_dia_2)">
+				Día 2
+			</button>
+			<button id="tres" ion-button (click)="linkButtonDia(evento[0].field_dia_3)">
+				Día 3
+			</button>
+		</div>
+		<img src="http://softloli.mindsoftdev.com{{evento[0].field_header_interno}}" class="header">
+		<img src="http://softloli.mindsoftdev.com{{evento[0].field_logo_agenda}}" class="header-hija">
+
+	</div>
+	<ion-list *ngFor="let agendaItem of agendaDiaList; let i = index">
+		<button ion-item (click)="toggleSection(i)" *ngIf="agendaItem.field_break" detail-none [ngClass]="{'section-active': agendaItem.open, 'section': !agendaItem.open}" class="accordion"><Strong>
+			{{agendaItem.field_hora_de_inicio | date:'H:mm'}} a {{agendaItem.field_hora_de_fin | date:'H:mm'}} - {{agendaItem.title}}<br>{{agendaItem.title_1}}, {{agendaItem.field_empresa}} - {{agendaItem.field_pais}}</Strong>
+			<ion-icon item-right name="arrow-forward" *ngIf="!agendaItem.open"></ion-icon>
+			<ion-icon item-right name="arrow-down" *ngIf="agendaItem.open"></ion-icon>
+		</button>
+		<ion-list>		
+			<ion-item *ngIf="agendaItem.open" no-lines>
+				{{agendaItem.field_cargo}} <Strong><p innerHTML='{{agendaItem.body}}'></p>
+				</Strong>
+			</ion-item>
+		</ion-list>
+	</ion-list>
+	<Strong>{{fecha}}</Strong><br>
+	<button ion-button (click)="linkButtonDiaSala(fecha, 4)">
+		Sala 1
+	</button>
+	<button ion-button (click)="linkButtonDiaSala(fecha, 5)">
+		Sala 2
+	</button>
+	<ion-list *ngFor="let itemInterno of agendaSalaList ; let j= index">
+		<button ion-item (click)="toggleSection2(j)" detail-none [ngClass]="{'section-active': itemInterno.open, 'section': !itemInterno.open}" class="accordion"><Strong>
+			{{itemInterno.field_hora_de_inicio | date:'H:mm'}} a {{itemInterno.field_hora_de_fin | date:'H:mm'}} - {{itemInterno.title}}<br>{{itemInterno.title_1}}, {{itemInterno.field_empresa}} - {{itemInterno.field_pais}}</Strong>
+			<ion-icon item-right name="arrow-forward" *ngIf="!itemInterno.open"></ion-icon>
+			<ion-icon item-right name="arrow-down" *ngIf="itemInterno.open"></ion-icon>
+		</button>
+		<ion-list>		
+			<ion-item *ngIf="itemInterno.open" no-lines>
+				{{itemInterno.field_cargo}} <Strong><p innerHTML='{{itemInterno.body}}'></p>
+				</Strong>
+			</ion-item>
+		</ion-list>
+
+	</ion-list>
+</ion-content>

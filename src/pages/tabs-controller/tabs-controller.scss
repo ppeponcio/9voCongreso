@@ -1,0 +1,12 @@
+page-tabs-controller {
+	.tab-button{
+		border-top: 7px solid map-get($colors,primary);
+	}
+	.tab-button[aria-selected=true]{
+		.tab-button-icon {
+			color: map-get($colors,secondary) !important;
+		}
+		color: map-get($colors,secondary) !important;
+		background-color: map-get($colors,primary);
+	}
+}

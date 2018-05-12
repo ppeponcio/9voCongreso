@@ -1,0 +1,27 @@
+page-informacion {
+	.item-inner{
+		border-bottom: none !important;
+	}
+	.item-block{
+		border-bottom: 2px solid map-get($colors,primary) !important;
+		border-top: none !important;
+	}
+	.container-top{
+		position: relative;
+		text-align: center;
+		color: white;
+		.header{
+			width:100%;
+		}
+		h2{
+			text-transform: uppercase;
+			font-weight: bold;
+			color:map-get($colors,blue);
+			font-size:1.6em;
+			position: absolute;
+			top: 25%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}

@@ -1,0 +1,19 @@
+<ion-header>
+</ion-header>
+<ion-content *ngFor="let event of evento" padding id="page5">
+	<div class="container-top">
+		<img src="http://softloli.mindsoftdev.com{{evento[0].field_header_interno}}" class="header">
+		<h2>Patrocinadores</h2>
+	</div>
+	<ion-list *ngFor="let dataItem of dataList">
+		<button ion-item (click)="linkButton(dataItem.nid)" class="container">
+			<div class="container-image">
+				<img src="http://softloli.mindsoftdev.com{{dataItem.field_imagen_patro}}">
+			</div>
+			<div class="container-middle">
+				<h2>{{dataItem.title}}</h2><br>
+				<div class="text">{{dataItem.field_pagina_web}}<br>{{dataItem.field_categoria}}</div>
+			</div>			
+		</button>
+	</ion-list>
+</ion-content>

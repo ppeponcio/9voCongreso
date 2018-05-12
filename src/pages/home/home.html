@@ -1,0 +1,25 @@
+<ion-header>
+
+</ion-header>
+<ion-content padding class="login-background" *ngFor="let event of evento">
+	<img src="http://softloli.mindsoftdev.com{{evento[0].field_header_home}}" class="header-image">
+	<h2>PRINCIPALES PONENTES</h2>
+	<ion-slides >
+		<ion-slide *ngFor="let dataItem of dataList">
+			<div class="container-mid">
+				<button ion-button (click)="linkButton(dataItem.nid)" class="all-container">
+					<div class = 'image'>
+						<img src="http://softloli.mindsoftdev.com{{dataItem.field_imagen_ponente}}">
+					</div>
+					<div class="text-container">
+						<p>
+							{{dataItem.title}}<br>
+							{{dataItem.field_pais}}<br>
+							{{dataItem.field_empresa}}
+						</p>
+					</div>
+				</button>
+			</div>
+		</ion-slide>
+	</ion-slides>
+</ion-content>

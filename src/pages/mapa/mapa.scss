@@ -1,0 +1,28 @@
+page-mapa {
+	position: relative;
+	top: 0;
+	left: 0;
+	#map{
+		height:100%;
+		z-index:1;
+	}
+	.container-top{
+		position:absolute;
+		top:0;
+		z-index:99;
+		.header{
+			width:100%;
+		}
+		h2{
+			text-transform: uppercase;
+			font-weight: bold;
+			color:map-get($colors,blue);
+			font-size:1.6em;
+			position: absolute;
+			top:30%;
+			left:50%;
+			transform: translate(-50%, -50%);
+
+		}
+	}
+}

@@ -1,0 +1,26 @@
+<ion-header>
+</ion-header>
+<ion-content *ngFor="let event of evento" id="page6">
+  <div class="container-top">
+    <img src="http://softloli.mindsoftdev.com{{evento[0].field_header_interno}}" class="header">
+    <h2>Ponentes</h2>
+  </div>
+  <ion-list id="informacion-list1">
+    <ion-item color="none" on-click="goToHoteles()" id="informacion-list-item9">
+      <ion-thumbnail item-left>
+        <img src="http://softloli.mindsoftdev.com{{evento[0].field_icono_hotel}}" class="header">
+      </ion-thumbnail>
+      <h2>
+        Hoteles
+      </h2>
+    </ion-item>
+    <ion-item color="none" on-click="goToMapa()" id="informacion-list-item10">
+      <ion-thumbnail item-left>
+        <img src="http://softloli.mindsoftdev.com{{evento[0].field_icono_}}" class="header">
+      </ion-thumbnail>
+      <h2>
+        Mapa
+      </h2>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,76 @@
+page-home {
+	.header-image{
+		width:100%;
+	}
+	h2{
+		color:white;
+		text-align: center;
+		text-transform: uppercase;
+		font-size:1.5em;
+		margin:3% 0 1% 0;
+		padding:0;
+	}
+	ion-slides{
+		max-height:30%; 
+	}
+	.swiper-container{
+		height:100%;
+	}
+	.swiper-slide-active{
+		width: 100%;
+	}
+	.scroll-content{
+		padding:0 !important;
+	}
+	.login-background {
+		background-image: url("../assets/imgs/background.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	.slide-zoom{
+		width:95%;
+	}
+	.container-mid{
+		height:50%;
+		width:100%;
+		padding:3%;
+		background-color:map-get($colors,primary);
+		border-left: 2px solid map-get($colors,black);
+		border-right: 2px solid map-get($colors,black);
+		border-top: 1px solid map-get($colors,black);
+		border-bottom: 1px solid map-get($colors,black);
+		.all-container{
+			background-color:map-get($colors,black);
+			border-radius: 0%;
+			height:100%;
+			width:100%;
+			padding: 0 0 0 0;
+			margin: 0 0 0 0;
+			.image{
+				padding-top: 0;
+				margin: 0;
+				width:50%;
+				img{
+					// height:140px;
+					align: left;
+				}
+			}
+			.text-container{
+				margin: 0;
+				height:100%;
+				padding: 0;
+				align: left;
+				width:50%;
+				font-size:0.8em;
+
+				p{
+					height:100%;
+					// height: 140px;
+					word-wrap: break-word;
+					padding:5%;
+				}
+			}
+		}
+	}
+
+}

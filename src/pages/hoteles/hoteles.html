@@ -1,0 +1,19 @@
+<ion-header>
+</ion-header>
+<ion-content *ngFor="let event of evento" id="page3">
+	<div class="container-top">
+		<img src="http://softloli.mindsoftdev.com{{evento[0].field_header_interno}}" class="header">
+		<h2>Hoteles</h2>
+	</div>
+	<ion-list *ngFor="let dataItem of dataList">
+		<ion-item ion-item class="container">
+			<div class="container-image">
+				<img src="http://softloli.mindsoftdev.com{{dataItem.field_imagen_hotel}}">
+			</div>
+			<div class="container-middle">
+				<h2>{{dataItem.title}}</h2><br>
+				<div innerHtml="{{dataItem.body}}" class="text"></div>
+			</div>			
+		</ion-item>
+	</ion-list>
+</ion-content>

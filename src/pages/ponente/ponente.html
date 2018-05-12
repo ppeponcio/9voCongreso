@@ -1,0 +1,25 @@
+<ion-header>
+</ion-header>
+
+<ion-content *ngFor="let event of evento" padding id="page10">
+
+	
+	<div *ngFor="let dataItem of dataList" class="content">
+		<div class="container-top">
+			<img src="http://softloli.mindsoftdev.com{{evento[0].field_header_interno}}" class="header">
+			<h2>Ponentes</h2>
+			<div class="image-container">
+				<img src="http://softloli.mindsoftdev.com{{dataItem.field_imagen_ponente}}">
+			</div> 
+		</div>
+
+
+		<div class="title-container">
+
+			<h2>{{dataItem.title}}</h2>
+		</div> 
+		<p innerHtml="{{dataItem.body}}"></p>
+	</div>
+
+	
+</ion-content>
